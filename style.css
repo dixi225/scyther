@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap');
+*
+{   
+    box-sizing: border-box;
+}
+body
+{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+.video-cont
+{
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+}
+video
+{
+    height: 100%;
+    width: 100%;
+}
+.action-cont
+{
+    /* background-color: lightblue; */
+    display: flex;
+    flex-direction:column;
+    justify-content:space-around;
+    height: 15rem;
+    width: 5rem;
+    position: absolute;
+    right: 5rem;
+    top: calc( ( 100vh - 12rem ) / 2 );
+}
+.action-cont >*
+{
+    width: 100%;
+    height: 5rem;
+    border-radius: 50%;
+    border: 5px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.record-btn
+{
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    background-color: red;
+}
+.capture-btn
+{
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    background-color: white;
+}
+.scale-record
+{
+    animation-name: scale-record;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+}
+.scale-capture
+{
+    animation-name: scale-capture;
+    animation-iteration-count: 1;
+    animation-duration: 1s;
+}
+@keyframes scale-record
+{
+    0%
+    {
+        transform: scale(0.8);
+    }
+    100%
+    {
+        transform: scale(1.1);
+    }
+}
+@keyframes scale-capture
+{
+    0%
+    {
+        transform: scale(0.8);
+    }
+    100%
+    {
+        transform: scale(1.1);
+    }
+}
+.timer-cont
+{
+    position: absolute;
+    bottom: 10rem;
+    left: 5rem;
+    color: azure;
+}
+.timer{
+    display: none;
+    font-family: 'Nunito', sans-serif;
+}
+.filter-cont
+{
+    position: absolute;
+    top: calc( ( 100vh - 28rem) / 2 ) ;
+    left: 5rem;
+    height: 28rem;
+    width: 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.filter
+{
+    height: 4rem;
+    width: 5rem;
+    background-image: url(https://images.unsplash.com/photo-1646960706799-d178b8c5604f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1500&q=80);
+    background-size: 100%;
+    background-blend-mode: color-burn;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.orange
+{
+background-color: #ffa50052;
+}
+.pink
+{
+background-color: #ffc0cb57;;
+}
+.brown
+{
+background-color: #a52a2a59;
+}
+.transparet
+{
+    background-color:transparent;
+}
